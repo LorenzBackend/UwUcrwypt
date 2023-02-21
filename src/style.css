@@ -2,24 +2,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
 
 body {
+  background: linear-gradient(90deg, #ff0000, #ffff00, #0000ff, #00ff00);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
-
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  /*animation: gradient 5s ease infinite;*/
-  background: #1e1e1e;
   height: 100vh;
-
-  color: #fff;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 h1 {
-    font-size: 7.5rem;
-    color: #fff;
-    font-family: "Pangolin", sans-serif;
-    margin: 0;
-  }
+  font-size: 7.5rem;
+  color: #fff;
+  font-family: "Pangolin", sans-serif;
+  margin: 0;
+}
 
 .container {
   display: flex;
@@ -65,16 +66,30 @@ background-color: #f5f5f5;
     flex-direction: row;
 }
 
+.textinput {
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  width: 19vw;
+}
+
+#result {
+  background-color: transparent;
+  border: 3px solid #fff;
+  border-radius: 50px;
+}
+
 .btn {
     margin: 20px;
     border: none;
     border-radius: 50px;
     height: 50px;
     width: 150px;
-    background-color: #235bd5;
+    background-color: transparent;
     color: #fff;
     font-size: 15px;
     cursor: pointer;
+    border: 3px solid #fff;
 }
 #valueInput:focus {
     outline: none !important;

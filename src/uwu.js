@@ -1,5 +1,6 @@
 const btnEncrypt = document.getElementById('btnEncrypt');
 const btnDecrypt = document.getElementById('btnDecrypt');
+const btnCopy = document.getElementById('btnCopy');
 const result = document.getElementById('result');
 const myInput = document.getElementById('myinput');
 
@@ -11,6 +12,14 @@ btnEncrypt.addEventListener('click', ()=> {
 btnDecrypt.addEventListener('click', ()=> {
     let encryptedText = decryptString(myInput.value)
     result.textContent = encryptedText;
+})
+
+btnCopy.addEventListener('click', ()=> {
+    let copyText = document.getElementById('result');
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+    alert('Copied!');
 })
 
 function encryptString(text) {
@@ -49,5 +58,3 @@ function decryptString(text) {
 
   return str;
 }
-
-// ich muss 
